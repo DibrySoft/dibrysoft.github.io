@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dibrysoft Launcher</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+      body {
+        font-family: "Montserrat", Arial, sans-serif;
+        background: #e3f0ff
+          url("https://qptirozlxdhrobkpndxm.supabase.co/storage/v1/object/public/dslauncher/promoted/b6f31fe6-ccb7-4349-bbb7-7404ee8ae544.jpeg")
+          no-repeat center center fixed;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        height: 100vh;
+      }
+      .container {
+        background: rgba(247, 251, 255, 0.7); /* glass effect */
+        padding: 48px 36px;
+        border-radius: 18px;
+        box-shadow: 0 8px 32px rgba(0, 64, 128, 0.16);
+        text-align: center;
+        border: 1px solid rgba(179, 209, 247, 0.4);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        transition: box-shadow 0.3s;
+        margin-left: 64px;
+        max-width: 500px;
+        width: 100%;
+      }
+      .container:hover {
+        box-shadow: 0 12px 40px rgba(21, 101, 192, 0.18);
+      }
+      h1 {
+        color: #1565c0;
+        margin-bottom: 18px;
+        font-size: 2.4em;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-shadow: 0 2px 8px rgba(21, 101, 192, 0.08);
+      }
+      p {
+        color: #3a5fa4;
+        margin-bottom: 36px;
+        font-size: 1.15em;
+        font-weight: 400;
+      }
+      .download-btn {
+        background: linear-gradient(90deg, #1976d2 0%, #64b5f6 100%);
+        color: #fff;
+        border: none;
+        padding: 16px 40px;
+        border-radius: 8px;
+        font-size: 1.15em;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+        text-decoration: none;
+        display: inline-block;
+        box-shadow: 0 2px 8px rgba(21, 101, 192, 0.1);
+      }
+      .download-btn:hover {
+        background: linear-gradient(90deg, #64b5f6 0%, #1976d2 100%);
+        transform: translateY(-2px) scale(1.04);
+        box-shadow: 0 6px 16px rgba(21, 101, 192, 0.18);
+      }
+      @media (max-width: 600px) {
+        body {
+          align-items: center;
+          padding: 16px;
+        }
+        .container {
+          margin-left: 0;
+          padding: 28px 12px;
+          border-radius: 14px;
+          max-width: 99vw;
+        }
+        h1 {
+          font-size: 1.5em;
+        }
+        p {
+          font-size: 1em;
+          margin-bottom: 24px;
+        }
+        .download-btn {
+          padding: 12px 24px;
+          font-size: 1em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dibrysoft Launcher</h1>
+      <p>Welcome to Dibrysoft Launcher. Download the latest version below.</p>
+      <a
+        href="https://github.com/DibrySoft/dibrysoft.github.io"
+        class="download-btn"
+        >Download</a
+      >
+    </div>
+  </body>
+</html>
