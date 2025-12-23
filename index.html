@@ -1,112 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Dibrysoft Launcher</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Dibrysoft Launcher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+    body {
+      font-family: "Montserrat", Arial, sans-serif;
+      background: #e3f0ff url("https://qptirozlxdhrobkpndxm.supabase.co/storage/v1/object/public/dslauncher/promoted/website_nbg.png") no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: rgba(247, 251, 255, 0.1);
+      /* glass effect */
+      padding: 48px 36px;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0, 64, 128, 0.16);
+      text-align: center;
+      border: 1px solid rgba(179, 209, 247, 0.4);
+      -webkit-backdrop-filter: blur(6px) saturate(180%);
+      backdrop-filter: blur(6px) saturate(180%);
+      transition: box-shadow 0.3s;
+      margin-left: 64px;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .container:hover {
+      box-shadow: 0 12px 40px rgba(21, 101, 192, 0.18);
+    }
+
+    h1 {
+      color: #d9dadb;
+      margin-bottom: 18px;
+      font-size: 2.4em;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px rgba(21, 101, 192, 0.08);
+    }
+
+    p {
+      color: #b7b8b9;
+      margin-bottom: 36px;
+      font-size: 1.15em;
+      font-weight: 400;
+    }
+
+    .download-btn {
+      background: linear-gradient(90deg, #1976d2 0%, #64b5f6 100%);
+      color: #fff;
+      border: none;
+      padding: 16px 40px;
+      border-radius: 8px;
+      font-size: 1.15em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 2px 8px rgba(21, 101, 192, 0.1);
+    }
+
+    .download-btn:hover {
+      background: linear-gradient(90deg, #64b5f6 0%, #1976d2 100%);
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 6px 16px rgba(21, 101, 192, 0.18);
+    }
+
+    @media (max-width: 600px) {
       body {
-        font-family: "Montserrat", Arial, sans-serif;
-        background: #e3f0ff
-          url("https://qptirozlxdhrobkpndxm.supabase.co/storage/v1/object/public/dslauncher/promoted/website_nbg.png")
-          no-repeat center center fixed;
-        background-size: cover;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        height: 100vh;
+        align-items: center;
+        padding: 16px;
       }
+
       .container {
-        background: rgba(247, 251, 255, 0.1); /* glass effect */
-        padding: 48px 36px;
-        border-radius: 18px;
-        box-shadow: 0 8px 32px rgba(0, 64, 128, 0.16);
-        text-align: center;
-        border: 1px solid rgba(179, 209, 247, 0.4);
-        -webkit-backdrop-filter: blur(6px) saturate(180%);
-        backdrop-filter: blur(6px) saturate(180%);
-        transition: box-shadow 0.3s;
-        margin-left: 64px;
-        max-width: 500px;
-        width: 100%;
+        margin-left: 0;
+        padding: 28px 12px;
+        border-radius: 14px;
+        max-width: 99vw;
       }
-      .container:hover {
-        box-shadow: 0 12px 40px rgba(21, 101, 192, 0.18);
-      }
+
       h1 {
-        color: #d9dadb;
-        margin-bottom: 18px;
-        font-size: 2.4em;
-        font-weight: 600;
-        letter-spacing: 1px;
-        text-shadow: 0 2px 8px rgba(21, 101, 192, 0.08);
+        font-size: 1.5em;
       }
+
       p {
-        color: #b7b8b9;
-        margin-bottom: 36px;
-        font-size: 1.15em;
-        font-weight: 400;
+        font-size: 1em;
+        margin-bottom: 24px;
       }
+
       .download-btn {
-        background: linear-gradient(90deg, #1976d2 0%, #64b5f6 100%);
-        color: #fff;
-        border: none;
-        padding: 16px 40px;
-        border-radius: 8px;
-        font-size: 1.15em;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-        text-decoration: none;
-        display: inline-block;
-        box-shadow: 0 2px 8px rgba(21, 101, 192, 0.1);
+        padding: 12px 24px;
+        font-size: 1em;
       }
-      .download-btn:hover {
-        background: linear-gradient(90deg, #64b5f6 0%, #1976d2 100%);
-        transform: translateY(-2px) scale(1.04);
-        box-shadow: 0 6px 16px rgba(21, 101, 192, 0.18);
+    }
+
+    /* Snow circles */
+    .snow {
+      position: fixed;
+      top: -10px;
+      background: white;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      filter: blur(0.2px);
+      animation-name: fall;
+      animation-timing-function: linear;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(110vh);
       }
-      @media (max-width: 600px) {
-        body {
-          align-items: center;
-          padding: 16px;
-        }
-        .container {
-          margin-left: 0;
-          padding: 28px 12px;
-          border-radius: 14px;
-          max-width: 99vw;
-        }
-        h1 {
-          font-size: 1.5em;
-        }
-        p {
-          font-size: 1em;
-          margin-bottom: 24px;
-        }
-        .download-btn {
-          padding: 12px 24px;
-          font-size: 1em;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Dibrysoft Launcher</h1>
-      <p>Welcome to Dibrysoft Launcher. Download the latest version below.</p>
-      <a
-        href="https://drive.google.com/file/d/1bLpMy0lyw-84N7Wp_wC5wglYt_cFnues/view?usp=sharing"
-        class="download-btn"
-        >Download</a
-      >
-    </div>
-  </body>
+    }
+  </style>
+</head>
+<script>
+  (function () {
+    const now = new Date();
+    const year = now.getFullYear();
+
+    let start = new Date(year, 11, 6); // Dec 6
+    let end = new Date(year + 1, 0, 6); // Jan 6 next year
+
+    if (now.getMonth() === 0 && now.getDate() <= 6) {
+      start = new Date(year - 1, 11, 6);
+      end = new Date(year, 0, 6);
+    }
+
+    if (now < start || now > end) return;
+
+    const MAX_SNOW = 270;
+
+    function createSnow() {
+      if (document.querySelectorAll(".snow").length > MAX_SNOW) return;
+
+      const snow = document.createElement("div");
+      snow.className = "snow";
+
+      const size = Math.random() * 4 + 2;
+      const opacity = Math.random() * 0.6 + 0.2;
+      const duration = Math.random() * 8 + 6;
+      const drift = Math.random() * 40 - 20;
+
+      snow.style.width = size + "px";
+      snow.style.height = size + "px";
+      snow.style.opacity = opacity;
+      snow.style.left = Math.random() * window.innerWidth + "px";
+      snow.style.animationDuration = duration + "s";
+      snow.style.transform = `translateX(${drift}px)`;
+
+      document.body.appendChild(snow);
+
+      setTimeout(() => snow.remove(), duration * 1000);
+    }
+
+    setInterval(createSnow, 50);
+  })();
+</script>
+
+<body>
+  <div class="container">
+    <h1>Dibrysoft Launcher</h1>
+    <p>Welcome to Dibrysoft Launcher. Download the latest version below.</p>
+    <a href="https://drive.google.com/file/d/1bLpMy0lyw-84N7Wp_wC5wglYt_cFnues/view?usp=sharing"
+      class="download-btn">Download</a>
+  </div>
+</body>
+
 </html>
-
-
-
